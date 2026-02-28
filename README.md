@@ -160,7 +160,3 @@ Open **http://localhost:5173** in your browser, upload the CSV, and explore!
 All `GET` endpoints support query params: `date_start`, `date_end`, `state`, `category`, `device_type`, `network_type`, `age_group`
 
 ---
-
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
