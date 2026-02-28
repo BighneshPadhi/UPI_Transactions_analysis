@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import API_BASE from '../api';
 import { Upload, FileText, CheckCircle } from 'lucide-react';
 import { useAppContext } from '../App';
 import StatCard from '../components/StatCard';
@@ -42,7 +43,7 @@ export default function UploadPage() {
                 setProgress(prev => Math.min(prev + 8, 90));
             }, 200);
 
-            const resp = await fetch('/api/upload', {
+            const resp = await fetch(`${API_BASE}/api/upload`, {
                 method: 'POST',
                 body: formData,
             });

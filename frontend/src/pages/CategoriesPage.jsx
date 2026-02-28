@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import API_BASE from '../api';
 import { useAppContext } from '../App';
 import ChartCard from '../components/ChartCard';
 import {
@@ -30,7 +31,7 @@ export default function CategoriesPage() {
     useEffect(() => {
         if (!uploaded) return;
         setLoading(true);
-        fetch(`/api/categories${buildQuery()}`)
+        fetch(`${API_BASE}/api/categories${buildQuery()}`)
             .then(r => r.json())
             .then(d => { setData(d); setLoading(false); })
             .catch(() => setLoading(false));

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import API_BASE from '../api';
 import { useAppContext } from '../App';
 import ChartCard from '../components/ChartCard';
 import StatCard from '../components/StatCard';
@@ -32,7 +33,7 @@ export default function FraudPage() {
     useEffect(() => {
         if (!uploaded) return;
         setLoading(true);
-        fetch(`/api/fraud${buildQuery()}`)
+        fetch(`${API_BASE}/api/fraud${buildQuery()}`)
             .then(r => r.json())
             .then(d => { setData(d); setLoading(false); })
             .catch(() => setLoading(false));

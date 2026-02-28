@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import API_BASE from '../api';
 import { useAppContext } from '../App';
 import StatCard from '../components/StatCard';
 import ChartCard from '../components/ChartCard';
@@ -44,8 +45,8 @@ export default function OverviewPage() {
         setLoading(true);
         const qs = buildQuery();
         Promise.all([
-            fetch(`/api/summary${qs}`).then(r => r.json()),
-            fetch(`/api/overview${qs}`).then(r => r.json()),
+            fetch(`${API_BASE}/api/summary${qs}`).then(r => r.json()),
+            fetch(`${API_BASE}/api/overview${qs}`).then(r => r.json()),
         ]).then(([s, o]) => {
             setSummary(s);
             setData(o);

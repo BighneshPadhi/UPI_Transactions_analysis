@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import API_BASE from '../api';
 import { useAppContext } from '../App';
 import {
     Clock, ShoppingBag, Smartphone, AlertTriangle, MapPin,
@@ -26,7 +27,7 @@ export default function InsightsPage() {
     useEffect(() => {
         if (!uploaded) return;
         setLoading(true);
-        fetch(`/api/insights${buildQuery()}`)
+        fetch(`${API_BASE}/api/insights${buildQuery()}`)
             .then(r => r.json())
             .then(d => { setData(d); setLoading(false); })
             .catch(() => setLoading(false));

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import API_BASE from '../api';
 import { useAppContext } from '../App';
 import ChartCard from '../components/ChartCard';
 import {
@@ -62,7 +63,7 @@ export default function GeographyPage() {
     useEffect(() => {
         if (!uploaded) return;
         setLoading(true);
-        fetch(`/api/geography${buildQuery()}`)
+        fetch(`${API_BASE}/api/geography${buildQuery()}`)
             .then(r => r.json())
             .then(d => { setData(d); setLoading(false); })
             .catch(() => setLoading(false));
