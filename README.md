@@ -2,7 +2,7 @@
 
 A full-stack fintech analytics platform for exploring **250,000+ UPI transactions**. Upload your dataset and instantly get interactive visualizations, fraud analysis, geographic insights, and AI-generated findings — all in a premium dark-themed dashboard inspired by Stripe and Razorpay.
 
-![Dashboard Preview](https://img.shields.io/badge/Status-Live-brightgreen) ![Python](https://img.shields.io/badge/Backend-Flask-blue) ![React](https://img.shields.io/badge/Frontend-React-61dafb) ![License](https://img.shields.io/badge/License-MIT-yellow)
+![Dashboard Preview](https://img.shields.io/badge/Status-Live-brightgreen) ![Python](https://img.shields.io/badge/Backend-Flask-blue) ![React](https://img.shields.io/badge/Frontend-React-61dafb)
 
 ---
 
